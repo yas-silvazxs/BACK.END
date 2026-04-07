@@ -1,4 +1,3 @@
-//- Crie uma função para adicionar um novo elemento na lista
 //- Crie uma função para filtrar os dados por preço (exemplo: preço<100)
 //- Crie uma função para aplicar com desconto em todos os produtos
 
@@ -28,7 +27,6 @@ function mostrarlivros(listas){
 
     })
 }
-mostrarlivros(livros)
 
 function addlivros(titulo, autor, ano, paginas, preco, sinopse ){ 
     livros.push({
@@ -38,22 +36,25 @@ function addlivros(titulo, autor, ano, paginas, preco, sinopse ){
         paginas: paginas,
         preco: preco,
         sinopse: sinopse
-         
+       
     })
+     console.logonsole.log ("--_________livro adicionado com sucesso________--")
+     ("--___________________________________________________________________________________________________----")
 } 
-
 addlivros("O Iluminado (The Shining)","Stephen King", 1977, 464, 80, "O filme O Iluminado (The Shining), dirigido por Stanley Kubrick e lançado em 1980, é um clássico do terror psicológico baseado no livro homônimo de Stephen King.")
 
 
+mostrarlivros(livros)
 
 
+let livrosFiltrados = livros.filter((livro) => livro.preco < 100)
+console.log ("__livros filtrado_")
+console.log ("--____________________________________________________--")
 
-
-
-
-
-
-
-
-
+let livrosDesconto = livros.map((livro) => {
+    return {...livro, preco: livro.preco * 0.9}
+})
+console.log ("__livros com desconto_")
+console.log ("--____________________________________________________--")
+mostrarlivros(livrosDesconto)
 
