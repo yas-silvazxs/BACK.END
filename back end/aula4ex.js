@@ -32,8 +32,15 @@ console.log("aprovado")
 
 }
 
-
+#laço infinito
 while True:
     comando = input("Digite 'sair' para parar: ")
     if comando == "sair":
         break
+
+#contador
+contador = 0
+
+while contador <= 10:
+    print(contador)
+    contador += 1
