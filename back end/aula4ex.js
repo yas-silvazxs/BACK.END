@@ -31,3 +31,9 @@ console.log("aprovado")
     console.log("reprovado")
 
 }
+
+
+while True:
+    comando = input("Digite 'sair' para parar: ")
+    if comando == "sair":
+        break
